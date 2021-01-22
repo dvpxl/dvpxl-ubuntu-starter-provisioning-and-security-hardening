@@ -1,8 +1,11 @@
 sudo groupadd group
-useradd -G group user 	        # create user and assign to group
+sudo useradd -G group user 	        # create user and assign to group
 sudo usermod -aG group user 	# assign user to group
 sudo -g group user     		# assign to primary
 sudo -G g1,g2,g3 user  		# assign to secondaries
+
+# password disabled
+sudo adduser --system --group --disabled-password --home /path
 
 # info
 getent group 	       		# view all groups
