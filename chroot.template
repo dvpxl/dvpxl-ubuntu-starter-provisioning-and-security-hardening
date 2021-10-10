@@ -1,0 +1,5 @@
+# chroot template
+mkdir -p /tmp/user/bin/ /tmp/user/lib/
+cp -p /bin/sh /tmp/user/bin/
+cp -p $(ldd /bin/sh | sed -e "s/.*\s\//\//" -e "s/\s.*//") /tmp/user/lib/
+chroot /tmp/user /bin/sh
