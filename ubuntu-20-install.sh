@@ -1,8 +1,10 @@
 sudo apt update -y && sudo apt-get dist-upgrade -y
-sudo apt list --upgradable # view-only list of upgradables
-sudo apt upgrade -y 
-sudo reboot
+sudo apt list --upgradable # unnecessary after above
+sudo apt upgrade -y        # unnecessary after above
+sudo reboot            
 
+# Add unattended
+sudo dpkg-reconfigure --priority-low unattended-upgrades
 
 # Remaining Sections Below Kept for Further Notes:
 
