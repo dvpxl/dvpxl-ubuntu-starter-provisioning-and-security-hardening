@@ -1,4 +1,4 @@
-sudo apt update -y  # update
+sudo apt update -y && sudo apt-get dist-upgrade -y
 sudo apt list --upgradable # view-only list of upgradables
 sudo apt upgrade -y 
 sudo reboot
